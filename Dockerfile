@@ -5,7 +5,7 @@ FROM nginx:alpine
 COPY index.html /tmp/index.html
 
 # Move it to the Nginx web root
-RUN mv /tmp/index.html /var/www/html/index.html
+RUN ls -l /tmp && mv /tmp/index.html /var/www/html/index.html
 
 # Expose port 80
 EXPOSE 80
